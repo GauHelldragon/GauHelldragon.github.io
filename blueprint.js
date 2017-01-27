@@ -678,7 +678,7 @@ function getOutput( dict, blueprint ) {
 	
 	outputString = "Total Blocks: " + totalBlocks + "<br>";
 	var total = 0;
-	outputString += "<br>Cost of blocks by category<br>";
+	outputString += "<br>Cost of blocks by category<br><br>";
 	for ( var cat in totals ) {
 		outputString += ( cat + ": " + totals[cat] + "<br>");
 		total += parseFloat(totals[cat]);
