@@ -64,7 +64,7 @@ $(document).ready(function(){
 	$( "#run" ).click(function() { 
 		$.ajax({
 				url: "ftdDB.json",
-				type: "json"
+				dataType: "json"
 		}).done(function ( dictionary ) {
 //		dictionary = $.parseJSON(DictString);
 			var blueprint = $( "#blueprint" ).val();
