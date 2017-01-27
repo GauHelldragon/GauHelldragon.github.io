@@ -690,7 +690,7 @@ function getOutput( dict, blueprint ) {
 
 $(document).ready(function(){
 	$( "#run" ).click(function() { 
-		dictionary = $.parseJSON(DictString);
+		dictionary = $.parseJSON(dictString);
 		var blueprint = $( "#blueprint" ).val();
 		$("#output").html( getOutput(dictionary,blueprint) );
 			
