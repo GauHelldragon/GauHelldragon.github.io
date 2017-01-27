@@ -690,10 +690,11 @@ function getOutput( dict, blueprint ) {
 
 $(document).ready(function(){
 	$( "#run" ).click(function() { 
-		dictionary = $.parseJSON(dictString);
+		//dictionary = $.parseJSON(dictString);
+		$.getJSON( "http://GauHelldragon.github.io/ftdDB.json", function( dictionary ) {
 		var blueprint = $( "#blueprint" ).val();
 		$("#output").html( getOutput(dictionary,blueprint) );
-			
+		})
 		
 	})
 })
