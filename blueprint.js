@@ -31,6 +31,7 @@ function getOutput( dict, blueprint ) {
 		
 		totals[cat] = parseFloat(newDB[index].cost) + parseFloat(totals[cat]) ;
 		totalBlocks++;
+		if ( index == 0 ) { console.log("Core at: " + bpObj.Blueprint.BLP[b]) }
 		//console.log( "adding " + newDB[index].cost + " cost is now " + totals[cat]);
 	}
 	
