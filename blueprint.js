@@ -26,6 +26,7 @@ function getOutput( dict, blueprint ) {
 	var totalBlocks = 0;
 	for ( var b in Blocks ) {
 		var index = Blocks[b];
+		if ( typeof newDB[index] == 'undefined' ) { return "Could not find index" + index } 
 		var cat = newDB[index].category;
 		if ( isNaN(totals[cat]) ) { totals[cat] = 0; } 
 		
