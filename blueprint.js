@@ -18,6 +18,7 @@ function parseDict(mydict, bpObj) {
 
 
 function getOutput( dict, blueprint ) {
+	console.log("uwaooo");
 	var bpObj = $.parseJSON(blueprint);	
 	var outputString = "";
 	var newDB = parseDict(dict,bpObj);
@@ -26,7 +27,7 @@ function getOutput( dict, blueprint ) {
 	var totalBlocks = 0;
 	for ( var b in Blocks ) {
 		var index = Blocks[b];
-		if ( typeof newDB[index] == 'undefined' ) { return "Could not find index" + index } 
+		if ( typeof newDB[index] == 'undefined' ) { console.log("no index: " + index ); return  } 
 		var cat = newDB[index].category;
 		if ( isNaN(totals[cat]) ) { totals[cat] = 0; } 
 		
@@ -62,13 +63,41 @@ function getOutput( dict, blueprint ) {
 }
 
 
+function readBlueprint() {
+	var myBP = event.target.result;
+	$.getJSON( "ftdDB.json", function(dictionary) {
+		$("#output").html( getOutput(dictionary,myBP));
+	});
+}	
+
+
 $(document).ready(function(){
-	$( "#run" ).click(function() { 
+	console.log("uwaaaa!!");
+	$( "#blueprint" ).change( function() { 
+		console.log("onchange called");
+		file = $("#blueprint")[0].files[0];
+		if ( !file ) { console.log("no file"); return }
+		fr = new FileReader();
+		fr.onload = readBlueprint
+		
+		fr.readAsText(file);
+		
+	});
+	
+	
+/*	$( "#run" ).click(function() { 
+		console.log("hmm");
 		//dictionary = $.parseJSON(dictString);
 		$.getJSON( "ftdDB.json", function( dictionary ) {
-		var blueprint = $( "#blueprint" ).val();
-		$("#output").html( getOutput(dictionary,blueprint) );
+			var blueprint = $( "#blueprint" ).val();
+			$("#output").html( getOutput(dictionary,blueprint) );
 		})
-		
-	})
+		.fail(
+			function( jqxhr, textStatus, error ) {
+				var err = textStatus + ", " + error;
+				console.log( "Request Failed: " + err );
+			}
+		);	
+		console.log("ok!");
+	}) */
 })
