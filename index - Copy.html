@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <title>Custom Keyboard</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <form>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text"
+                           class="form-control name"
+                           name="name" id="name"
+                           placeholder="Name"
+                           data-toggle="modal"
+                           data-target="#exampleModal">
+                </div>
+
+                <div class="form-group">
+                    <label for="location">location</label>
+                    <input type="text"
+                           class="form-control location"
+                           name="location" id="location"
+                           placeholder="Location"
+                           data-toggle="modal"
+                           data-target="#exampleModal">
+                </div>
+                <button type="submit" class="btn btn-primary submit-btn">Submit</button>
+            </form>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade"
+             id="exampleModal"
+             tabindex="-1" role="dialog"
+             aria-labelledby="exampleModalLabel"
+             aria-hidden="true">
+
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Virtual Keyboard</h2>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12 ">
+                                    <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                                        <a class="nav-item nav-link active"
+                                           id="lower-tab"
+                                           data-toggle="tab"
+                                           href="#lower"
+                                           role="tab"
+                                           aria-controls="lower"
+                                           aria-selected="true">Lower</a>
+                                        <a class="nav-item nav-link"
+                                           id="upper-tab"
+                                           data-toggle="tab"
+                                           href="#upper"
+                                           role="tab"
+                                           aria-controls="upper"
+                                           aria-selected="false">Upper</a>
+                                    </div>
+
+                                    <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+                                        <div class="tab-pane fade show active"
+                                             id="lower"
+                                             role="tabpanel"
+                                             aria-labelledby="lower-tab">
+
+                                            <!--Follow this example and apply changes to other button -->
+                                            <button class="glyph btn btn-light" data-glyph="&agrave;">&agrave;</button>
+                                            <button class="glyph btn btn-light" data-glyph="&aacute;">&aacute;</button>
+                                            <button class="glyph btn btn-light" data-glyph="&acirc;">&acirc;</button>
+                                            <button class="glyph btn btn-light" data-glyph="&auml;">&auml;</button>
+                                            <button class="glyph btn btn-light" data-glyph="&aogon;">&aogon;</button>
+                                            <button class="glyph btn btn-light" data-glyph="&aelig;">&aelig;</button>
+                                            <button class="glyph btn btn-light" data-glyph="&egrave;">&egrave;</button>
+                                            <button class="glyph btn btn-light" data-glyph="&eacute;">&eacute;</button>
+                                            <button class="glyph btn btn-light" data-glyph="&ecirc;">&ecirc;</button>
+                                            <button class="glyph btn btn-light" data-glyph="&euml;">&euml;</button>
+                                            <button class="glyph btn btn-light" data-glyph="&aring;">&aring;</button>
+                                            <br>
+                                            <br>
+                                            <button class="glyph btn btn-light" data-glyph="&yacute;">&yacute;</button>
+                                            <button class="glyph btn btn-light" data-glyph="&cdot;">&cdot;</button>
+                                            <button class="glyph btn btn-light" data-glyph="&ccedil;">&ccedil;</button>
+                                            <button class="glyph btn btn-light" data-glyph="&thorn;">&thorn;</button>
+                                            <button class="glyph btn btn-light" data-glyph="&Lstrok;">&Lstrok;</button>
+                                            <button class="glyph btn btn-light" data-glyph="&sup1;">&sup1;</button>
+                                            <button class="glyph btn btn-light" data-glyph="&iquest;">&iquest;</button>
+                                            <button class="glyph btn btn-light" data-glyph="&ntilde;">&ntilde;</button>
+                                            <button class="glyph btn btn-light" data-glyph="&Otilde;">&Otilde;</button>
+                                            <button class="glyph btn btn-light" data-glyph="&Odblac;">&Odblac;</button>
+                                            <button class="glyph btn btn-light" data-glyph="&eng;">&eng;</button>
+                                        </div>
+
+                                        <div class="tab-pane fade" id="upper" role="tabpanel" aria-labelledby="upper-tab">
+                                            <button class="glyph btn btn-light" data-glyph="&Agrave;">&Agrave;</button>
+                                            <button class="glyph btn btn-light" data-glyph="&Aacute;">&Aacute;</button>
+                                            <button class="glyph btn btn-light" data-glyph="&Acirc;">&Acirc;</button>
+                                            <button class="glyph btn btn-light" data-glyph="&Auml;">&Auml;</button>
+                                            <button class="glyph btn btn-light" data-glyph="&Aogon;">&Aogon;</button>
+                                            <button class="glyph btn btn-light" data-glyph="&AElig;">&AElig;</button>
+                                            <button class="glyph btn btn-light" data-glyph="&Egrave;">&Egrave;</button>
+                                            <button class="glyph btn btn-light" data-glyph="&Eacute;">&Eacute;</button>
+                                            <button class="glyph btn btn-light" data-glyph="&Ecirc;">&Ecirc;</button>
+                                            <button class="glyph btn btn-light" data-glyph="&Euml;">&Euml;</button>
+                                            <button class="glyph btn btn-light" data-glyph="&Eogon;">&Eogon;</button>
+                                            <br>
+                                            <br>
+                                            <button class="glyph btn btn-light" data-glyph="&micro;">&micro;</button>
+                                            <button class="glyph btn btn-light" data-glyph="&Cdot;">&Cdot;</button>
+                                            <button class="glyph btn btn-light" data-glyph="&Ccedil;">&Ccedil;</button>
+                                            <button class="glyph btn btn-light" data-glyph="&ordm;">&ordm;</button>
+                                            <button class="glyph btn btn-light" data-glyph="&frac12;">&frac12;</button>
+                                            <button class="glyph btn btn-light" data-glyph="&iquest;">&iquest;</button>
+                                            <button class="glyph btn btn-light" data-glyph="&Gdot;">&Gdot;</button>
+                                            <button class="glyph btn btn-light" data-glyph="&Hstrok;">&Hstrok;</button>
+                                            <button class="glyph btn btn-light" data-glyph="&Ntilde;">&Ntilde;</button>
+                                            <button class="glyph btn btn-light" data-glyph="&Otilde;">&Otilde;</button>
+                                            <button class="glyph btn btn-light" data-glyph="&ENG;">&ENG;</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Done</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery-1.10.2.min.js" ></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    $('.name, .location').on('shown.bs.modal', function () {
+        //$('#myInput').trigger('focus');
+    })
+
+    var selectedInput
+    /**
+     * We you click on the input[.form-control], set the element.
+     */
+    $('.form-control').click(function () {
+        selectedInput = $(this)
+    })
+
+    /**
+     * Get the data-glyph attribute and append it to the selected Input value
+     */
+    $('.glyph').click(function () {
+        selectedInput.val(selectedInput.val() + $(this).attr('data-glyph'))
+    })
+</script>
+
+</body>
+</html>
